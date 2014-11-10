@@ -1,0 +1,16 @@
+<h3>Dogs Available For Adoption</h3>
+
+<%= form_for @dog do |f| %>
+
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+<%= f.submit "Enter Dog" %>
+
+<% end %>

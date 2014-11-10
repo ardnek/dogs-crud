@@ -1,0 +1,25 @@
+<h3>Dogs</h3>
+
+<table>
+  <thead>
+    <tr>
+        <th>Breed</th>
+        <th>Age</th>
+        <th>Color</th>
+    </tr>
+  </thead>
+    <tbody>
+      <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.breed %></td>
+        <td><%= dog.age %></td>
+        <td><%= dog.color %></td>
+        <td><%= link_to "Edit", edit_dog_path(dog) %></td>
+        <td><%= link_to "Show", dog_path(dog) %></td>
+        <td><%= link_to "Delete", dog_path(dog), method: :delete %></td>
+      </tr>
+      <% end %>
+    </tbody>
+ </table>
+
+<%= link_to "Enter New Adoptable Dog", new_dog_path %>
